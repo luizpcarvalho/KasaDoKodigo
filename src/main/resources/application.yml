@@ -1,0 +1,11 @@
+micronaut:
+  application:
+    name: nossaCasaDoCodigo
+datasources:
+  default:
+    url: ${DB_URL:`jdbc:postgresql://localhost:5432/cdc?createDatabaseIfNotExist=true`}
+    driverClassName: org.postgresql.Driver
+    username: ${DB_USER:keycloak}
+    password: ${DB_PASSWORD:password}
+
+jpa.default.properties.hibernate.hbm2ddl.auto: update
